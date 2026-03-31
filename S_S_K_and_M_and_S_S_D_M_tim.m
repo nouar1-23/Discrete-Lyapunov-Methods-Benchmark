@@ -34,7 +34,7 @@ function [S1, S2, S3, n1, n2, n3, l1, l2, l3, q1, q2, q3] = S_S_K_and_M_and_S_S_
     p_mat = 2*I;
     d_count = 0;
     
-    while (max(abs(p_mat*p_mat - p_mat), [], 'all') > ip * max(abs(p_mat), [], 'all') && d_count <= m0/3)
+    while (max(abs(p_mat*p_mat - p_mat), [], 'all') > ip && d_count <= m0/3)
         d_count = d_count + 1;
         for i1 = 1:3
             S_temp = [-1*B0; A0];
